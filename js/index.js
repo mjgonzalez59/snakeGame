@@ -23,8 +23,6 @@ let food = {
 //Game Functions
 const main = (ctime) => {
   window.requestAnimationFrame(main);
-  // console.log(ctime);
-  // console.log(`(${ctime} - ${lastPaintTime}) / 1 < 1 / ${speed}`);
   if((ctime - lastPaintTime) / 1000 < 1 / speed ){
     return;
   }
@@ -88,13 +86,11 @@ const gameEngine = () => {
 
   // Part 3: Display the food
 
-  // snakeArray.forEach( (e, index) => {
     const foodElement = document.createElement("div");
     foodElement.style.gridRowStart = food.y;
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add("food");
     board.appendChild(foodElement);
-  // });
 }
 
 //Main logic Stars here
